@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 const Register = () => {
+  const navigate=useNavigate() ;
     const [name,setName]=useState("") ;
     const [email,setEmail]=useState("") ;
     const [password,setPassword]=useState("") ;
@@ -17,8 +18,8 @@ const Register = () => {
             'success'
           )
          setTimeout(()=>{
-            window.location="/login"
-         },3000) ;
+            navigate("/login")
+         },1000) ;
      }
        else{ Swal.fire({
         icon: 'error',
@@ -31,6 +32,7 @@ const Register = () => {
     }
     return ( 
         <div className="container">
+          <h1 style={{fontWeight:"700"}} className="text-center">Register</h1>
         <form onSubmit={handleSupmit} className="py-5">
         <div className="mb-3">
     <label htmlFor="exampleInputEmail1" className="form-label">User name</label>

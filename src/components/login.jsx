@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link ,useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 const Login = () => {
+  const navigate=useNavigate() ;
     const [email,setEmail]=useState("") ;
     const [password,setPassword]=useState("") ;
     const handleSubmit=(e)=>{
@@ -13,9 +14,9 @@ const Login = () => {
                 'success'
               )
              setTimeout(()=>{
-                window.location="/cart" ;
+                navigate("/cart") ;
 
-             },3000) 
+             },1000) 
 
         }
         else if(email!=localStorage.getItem("email")){
@@ -46,6 +47,7 @@ const Login = () => {
     }
     return (
         <div className="container">
+          <h1 style={{fontWeight:"700"}} className="text-center">Login</h1>
         <form onSubmit={handleSubmit} className="py-5">
   <div className="mb-3">
     <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
@@ -61,7 +63,7 @@ const Login = () => {
     }} type="password" className="form-control" id="exampleInputPassword1"/>
   </div>
   <div className="mb-3">
-   <Link style={{color:"dodgerblue"}} to="/register">I Don't Have Account</Link>
+   <Link onClick={()=>{localStorage.removeItem("productsItem")}} style={{color:"dodgerblue"}} to="/register">I Don't Have Account</Link>
   </div>
   <button type="submit" className="btn btn-primary">Sign In</button>
 </form>

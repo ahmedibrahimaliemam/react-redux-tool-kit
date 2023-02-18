@@ -1,9 +1,11 @@
 import React, { useEffect } from "react";
 import data from "./data/data.json" ;
 import "./cart.css" ;
+import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import  {addToCart,deleteFromCart ,clearCart} from "./slices/sproductSlice" ;
 const Cart = () => {
+    const navigate=useNavigate() ;
    const state=useSelector((state)=>state.cart) ;
     const dispatch=useDispatch() ;
     useEffect(()=>{
@@ -20,7 +22,7 @@ localStorage.setItem("productsItem",JSON.stringify(state)) ;
 <h2>{ele.name}</h2>
 <span>Price: {ele.price}$</span>
 {state.length==0 ?   <button onClick={()=>{
-localStorage.getItem("name")? dispatch(addToCart(ele)):window.location="/login"  ;}} className="btn btn-primary mt-5">Add To Cart</button> :state.find((product)=>product.id==ele.id)?
+localStorage.getItem("name")? dispatch(addToCart(ele)):navigate("/login")  ;}} className="btn btn-primary mt-5">Add To Cart</button> :state.find((product)=>product.id==ele.id)?
 <>
 <div className="product-controlls">
 <button onClick={()=>{

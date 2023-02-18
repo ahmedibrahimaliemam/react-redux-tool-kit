@@ -28,9 +28,11 @@ const productSlice=createSlice({
            return state.filter((ele)=>ele.id!=action.payload.id) ;
            
         },
-
+        clearState:(state,action)=>{
+            return state=action.payload ;
+        }
 
     }
 })
 export default productSlice.reducer ;
-export const {clearCart,addToCart,deleteFromCart}=productSlice.actions ;
+export const {clearCart,addToCart,deleteFromCart ,clearState}=productSlice.actions ;
