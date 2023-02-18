@@ -1,0 +1,95 @@
+[
+    {
+        "id": 1 ,
+        "name":"chair" ,
+        "price":50.33 ,
+        "image":"/imgs/chair.jpg" 
+    } ,
+    {
+        "id": 2 ,
+        "name":"glass" ,
+        "price":60,
+        "image":"/imgs/glass.jpg" 
+    } ,
+    {
+        "id": 3 ,
+        "name":"headphone" ,
+        "price":66.5 ,
+        "image":"/imgs/head.jpg" 
+    } ,
+    {
+        "id": 4 ,
+        "name":"iphone" ,
+        "price":3000 ,
+        "image":"/imgs/iphone.jpg" 
+    } ,
+    {
+        "id": 5 ,
+        "name":"watch" ,
+        "price":1000 ,
+        "image":"/imgs/watch.jpg" 
+    } ,
+    {
+        "id": 6 ,
+        "name":"Calculator" ,
+        "price":100.88 ,
+        "image":"/imgs/calc.jpg" 
+    } ,
+    {
+        "id": 7 ,
+        "name":"Java script book" ,
+        "price":35 ,
+        "image":"/imgs/java.webp" 
+    } ,
+    {
+        "id": 8 ,
+        "name":"labtop bag" ,
+        "price":25.23 ,
+        "image":"/imgs/bage.jpg" 
+    } ,
+    {
+        "id": 9 ,
+        "name":"modern mouse" ,
+        "price":42.3 ,
+        "image":"/imgs/mouse.jpg" 
+    } ,
+    {
+        "id": 10 ,
+        "name":"Quran kareem" ,
+        "price":150 ,
+        "image":"/imgs/quran.png" 
+    } ,
+    {
+        "id": 11 ,
+        "name":"Tablet" ,
+        "price":1000 ,
+        "image":"/imgs/tablet.png" 
+    } ,
+    {
+        "id": 12 ,
+        "name":"Mic" ,
+        "price":110 ,
+        "image":"/imgs/mic.jpg" 
+    } ,
+    {
+        "id": 13 ,
+        "name":"Labtop charge" ,
+        "price":20.90 ,
+        "image":"/imgs/labcharge.jpg" 
+    } ,
+    {
+        "id": 14 ,
+        "name":"Electricity Tools" ,
+        "price":35.96 ,
+        "image":"/imgs/electricity.jpg" 
+    } ,
+    {
+        "id": 15 ,
+        "name":"Shoose" ,
+        "price":20.77 ,
+        "image":"/imgs/shoose.jpg" 
+    }
+
+    
+
+]

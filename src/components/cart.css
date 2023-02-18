@@ -1,0 +1,28 @@
+.items{
+    text-align: center;
+    background-color: white;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+.items button{
+    width: 100% ;
+}
+.items h2{
+    font-size: 30px;
+    font-weight: 700;
+}
+.product-controlls{
+    padding-top: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.parent div{
+   margin: auto;
+}
+.items:hover{
+    box-shadow: 5px 10px 8px 10px #888888;
+}
