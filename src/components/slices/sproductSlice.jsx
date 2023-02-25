@@ -17,12 +17,13 @@ const productSlice=createSlice({
         deleteFromCart:(state,action)=>{
             const findProduct=state.find((ele)=>ele.id===action.payload.id) ;
             if(findProduct){
-                if(findProduct.quantatity==0){
-                    findProduct.quantatity=0 ;
+                if(findProduct.quantatity>0 ){
+                    findProduct.quantatity-=1;
+                    console.log(findProduct.quantatity);
                 }
-                else{findProduct.quantatity-=1;}
+                
             }
-
+           
         } ,
         clearCart:(state,action)=>{
            return state.filter((ele)=>ele.id!=action.payload.id) ;

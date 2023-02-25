@@ -15,7 +15,7 @@
         "id": 3 ,
         "name":"headphone" ,
         "price":66.5 ,
-        "image":"/imgs/head.jpg" 
+        "image":"/imgs/headphone.jpg" 
     } ,
     {
         "id": 4 ,
@@ -27,7 +27,7 @@
         "id": 5 ,
         "name":"watch" ,
         "price":1000 ,
-        "image":"/imgs/watch.jpg" 
+        "image":"/imgs/lacoste.jpg" 
     } ,
     {
         "id": 6 ,
@@ -43,15 +43,15 @@
     } ,
     {
         "id": 8 ,
-        "name":"labtop bag" ,
+        "name":"hand-bag" ,
         "price":25.23 ,
-        "image":"/imgs/bage.jpg" 
+        "image":"/imgs/bag.jpg" 
     } ,
     {
         "id": 9 ,
-        "name":"modern mouse" ,
+        "name":"labtop-Dell" ,
         "price":42.3 ,
-        "image":"/imgs/mouse.jpg" 
+        "image":"/imgs/dell.jpg" 
     } ,
     {
         "id": 10 ,

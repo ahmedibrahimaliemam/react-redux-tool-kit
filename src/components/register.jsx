@@ -8,8 +8,29 @@ const Register = () => {
     const [password,setPassword]=useState("") ;
     const handleSupmit=(e)=>{
         e.preventDefault() ;
-        localStorage.setItem("name",name) ;
+        if(name.length!==0 && name.trim()!=="")
+        {
+          localStorage.setItem("name",name)
+      }
+        else{
+          Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'User name must not be empty!',
+        })
+        return false ;
+      }if(email.slice(email.indexOf(".",email.length-4)).includes(".com")||email.slice(email.indexOf(".",email.length-4)).includes(".org")){
         localStorage.setItem("email",email) ;
+      }
+        else{
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'email must contain at the end such ".com or .org"!',
+          })
+          return false ;
+        }
+        
        if(password.length>=8) { 
         localStorage.setItem("password",password) ;
         Swal.fire(
@@ -25,7 +46,8 @@ const Register = () => {
         icon: 'error',
         title: 'Oops...',
         text: 'password length must be greater than or equal 8!',
-      }) }
+      })
+     }
 
 
 
@@ -35,7 +57,7 @@ const Register = () => {
           <h1 style={{fontWeight:"700"}} className="text-center">Register</h1>
         <form onSubmit={handleSupmit} className="py-5">
         <div className="mb-3">
-    <label htmlFor="exampleInputEmail1" className="form-label">User name</label>
+    <label htmlFor="exampleInputEmail1" className="form-label">Enter your name</label>
     <input onChange={(e)=>{
         setName(e.target.value)
     }} type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
